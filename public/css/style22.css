@@ -1,0 +1,248 @@
+img {vertical-align: middle;}
+
+ .content1 {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+ /* width: 100%;*/
+  padding: 13px;
+
+}
+
+  .carousel-inner img {
+    /*width: 100%;*/
+   /* height: 100%;*/
+  }
+h1 , h4{
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+ .content2 {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+ /* width: 100%;*/
+  padding: 2%;
+  width: 25%;
+   margin-bottom: 2%;
+   margin-left: 37%;
+   font-size: 2vw;
+   position: relative;
+
+}
+.text {
+    background-color:black;
+    color:#fff;
+    display:inline-block;
+    padding-left:4px;
+}
+.arrow {
+    border-style: dashed;
+    border-color: transparent;
+    border-width: 0.20em;
+    display: -moz-inline-box;
+    display: inline-block;
+    /* Use font-size to control the size of the arrow. */
+    font-size: 250px;
+    height: 0;
+    line-height: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 0;
+    background-color:#fff; /* change background color acc to bg color */ 
+    border-left-width: 0.2em;
+    border-left-style: solid;
+    border-left-color: black;
+    left:0.25em;
+}
+#c1 {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 0px;
+  right: 16px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 30px;
+}
+.caption{
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+#r1 {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+.responsive {
+  width: 100%;
+  max-width: 300px;
+  max-height: 230px;
+  height: 100%;
+}
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {
+ .responsive {
+  width: 100%;
+  max-width: 400px;
+  max-height: 230px;
+  height: 100%;
+  margin-bottom: 10%;
+}
+#b1{
+  display: none;
+}
+#b2{
+  display: none;
+}
+#b3{
+  display: none;
+}
+#b4{
+  display: none;
+}
+#b5{
+  display: none;
+}
+#b11{
+  padding: 2vw;
+}
+#b22{
+  padding: 2vw;
+}
+#b33{
+  padding: 2vw;
+}
+#b44{
+  padding: 2vw;
+}
+#b55{
+  padding: 2vw;
+}
+ 
+
+
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 767px) {
+ .responsive {
+  width: 100%;
+  max-width: 400px;
+  max-height: 230px;
+  height: 100%;
+  margin-bottom: 10%;
+}
+
+
+.img-thumbnail {
+      margin-left: auto;
+  margin-right: auto;
+}
+
+#b1{
+  display: none;
+}
+#b2{
+  display: none;
+}
+#b3{
+  display: none;
+}
+#b4{
+  display: none;
+}
+#b5{
+  display: none;
+}
+
+
+
+}
+
+@media screen and (min-width: 992px) {
+  #b11{
+  display: none;
+}
+#b22{
+  display: none;
+}
+#b33{
+  display: none;
+}
+#b44{
+  display: none;
+}
+#b55{
+  display: none;
+}
+}
+
+@media screen and (max-width: 500px) {
+
+  #b11{
+  display: none;
+}
+#b22{
+  display: none;
+}
+#b33{
+  display: none;
+}
+#b44{
+  display: none;
+}
+#b55{
+  display: none;
+}
+
+#b1{
+  display: none;
+}
+#b2{
+  display: none;
+}
+#b3{
+  display: none;
+}
+#b4{
+  display: none;
+}
+#b5{
+  display: none;
+}
+  }
+ 
+.img-thumbnail:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}

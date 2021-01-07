@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <title>New Post</title>
+
+  <style type="text/css">
+    .card {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+    }
+
+    button {
+      margin-left: 48%;
+
+    }
+  </style>
+</head>
+
+<body>
+  <% if (message.length > 0) { %>
+  <div class="alert alert-danger col-sm-12"><%= message %></div>
+  <% } else {%>
+  <h1 class="mt-2" id="h1">View Post</h1>
+  <hr class="w-50">
+
+    <div class="card" style="width: 18rem;">
+      <img src="http://localhost:3000/imgs/uploads/<%=data[0].images%>" class="card-img-top responsive" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%=data[0].title%></h5>
+        <p class="card-text"><%=data[0].description%></p>
+        <a href="/new" class="btn btn-info">Edit</a>
+        <a href="#" class="btn btn-danger">Delete</a>
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
+      </div>
+  
+  
+      <button type="submit" class="btn btn-success mt-2" style="margin-right: 70px;">Submit</button>
+  
+    </div>
+  <% } %>
+
+</body>
+
+</html>

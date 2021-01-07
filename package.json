@@ -1,0 +1,29 @@
+{
+  "name": "altruism_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "excel4node": "^1.7.2",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "express-message": "^1.2.3",
+    "express-messages": "^1.0.1",
+    "express-mysql-session": "^2.1.4",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.1",
+    "lodash.groupby": "^4.6.0",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.4.10",
+    "promise-mysql": "^4.1.3"
+  }
+}

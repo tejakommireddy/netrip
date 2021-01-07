@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+  <html lang="en">
+<head>
+  <title>New Post</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>New Post</title>
+    <style type="text/css">
+      h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+
+    </style>
+
+    
+  </head>
+  <body>
+      <h1 class="mt-5" id="h1">New Post</h1>
+      <hr class="w-50">
+    
+      <div class="container mt-3">
+
+      <form action="/" method="POST" role="form"  enctype="multipart/form-data" class="was-validated">
+        <% if (message.length > 0) { %>
+          <div class="alert alert-success col-sm-12"><%= message %></div>
+      <% } %>
+      <div class="row">
+      <div class="col-6">
+      <div class="input-group mb-3 input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text">State</span>
+        </div>
+        <input type="text" class="form-control" required placeholder="Enter State" name="state">
+        <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      </div>
+      <div class="col-6">
+      <div class="input-group mb-3 input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Category</span>
+        </div>
+        
+        <input type="text" class="form-control" required placeholder="Enter Category" name="category">
+        <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      </div>
+      </div>
+      <div class="input-group mb-3 input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Username</span>
+        </div>
+        <input type="text" class="form-control" required placeholder="Enter Username" name="username">
+        <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+  <div class="input-group mb-3 input-group-lg">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Title</span>
+    </div>
+    <input type="text" class="form-control" required placeholder="Enter Title" name="title">
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+   
+  <div class="form-group">
+    <label for="description">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required name="description"></textarea>
+  </div>
+
+  <div class="custom-file mb-3">
+    <input type="file" class="custom-file-input" id="customFile" name="uploaded_image">
+    <label class="custom-file-label" for="uploaded_image">Choose file</label>
+    
+  </div>
+  <div class="input-group input-group-lg mt-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-lg">Date</span>
+  </div>
+  <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="myDate" value="dd-mm-yyyy" required>
+  <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+
+
+<div class="text-center">
+
+<button type="submit" class="btn btn-success btn-lg mt-5" id="Submit">Submit</button>
+
+</div>
+</form>
+
+    </div>
+
+    
+<script>
+function myFunction() {
+  var x = document.getElementById("myDate").value;
+  
+}
+
+
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+
+
+</script>
+
+    <script src="js/new.js"></script>
+  </body>
+</html>
