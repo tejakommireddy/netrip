@@ -127,7 +127,7 @@ app.get('/', (req, res) => {
   res.redirect('/Tripura');
 });
  
-app.get('/new', loginRequired, routes.new);
+app.get('/new/:usernameOrEmail', loginRequired, routes.new);
 app.post('/', loginRequired, routes.new);
 
 // app.get('/show/:username/:category', loginRequired, routes.show);

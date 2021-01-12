@@ -37,20 +37,30 @@
   <h1 class="mt-2" id="h1">View Post</h1>
   <hr class="w-50">
 
-    <div class="card" style="width: 18rem;">
+    <div class="box" style="width: 18rem;display: flex;">
+      <div class="sub-box" style="border: black;">
       <img src="http://localhost:3000/imgs/uploads/<%=data[0].images%>" class="card-img-top responsive" alt="...">
-      <div class="card-body">
-        <h5 class="card-title"><%=data[0].title%></h5>
-        <p class="card-text"><%=data[0].description%></p>
-        <a href="/new" class="btn btn-info">Edit</a>
-        <a href="#" class="btn btn-danger">Delete</a>
+        <div class="sub-sub-box" style="display: flex;">
+          <a href="/new" class="btn btn-info">Edit</a>
+          <a href="#" class="btn btn-danger">Delete</a>
+        </div>
       </div>
-      <div class="card-footer text-muted">
-        2 days ago
-      </div>
-  
-  
-      <button type="submit" class="btn btn-success mt-2" style="margin-right: 70px;">Submit</button>
+
+      <div class="sub-box" style="border: black;">
+        <img src="http://localhost:3000/imgs/uploads/<%=data[0].images%>" class="card-img-top responsive" alt="...">
+          <div class="sub-sub-box" style="display: flex;">
+            <a href="#" class="btn btn-danger">Request Modify</a>
+          </div>
+        </div>
+
+        <div class="sub-box" style="border: black;">
+          <img src="http://localhost:3000/imgs/uploads/<%=data[0].images%>" class="card-img-top responsive" alt="...">
+            <div class="sub-sub-box" style="display: flex;">
+              <a href="/new" class="btn btn-info">Edit</a>
+              <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+          </div>  
+        <button type="submit" class="btn btn-success mt-2" style="margin-right: 70px;">Submit</button>
   
     </div>
   <% } %>

@@ -9,7 +9,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <title>New Post</title>
+    <header>
+      <title>New Post</title>
+    </header>
     <style type="text/css">
       h1 {
   font-family: 'Playfair Display', serif;
@@ -37,7 +39,17 @@
         <div class="input-group-prepend">
           <span class="input-group-text">State</span>
         </div>
-        <input type="text" class="form-control" required placeholder="Enter State" name="state">
+        <input type="text" class="form-control" required placeholder="Enter State" name="state" list="state list">
+        <datalist id="state list">
+          <option value="Sikkim"></option>
+          <option value="Meghalaya"></option>
+          <option value="Nagaland"></option>
+          <option value="Assam"></option>
+          <option value="Mizoram"></option>
+          <option value="Manipur"></option>
+          <option value="Arunachal"></option>
+          <option value="Tripura"></option>
+        </datalist>
         <div class="valid-feedback">Valid.</div>
           <div class="invalid-feedback">Please fill out this field.</div>
       </div>
@@ -48,7 +60,13 @@
           <span class="input-group-text">Category</span>
         </div>
         
-        <input type="text" class="form-control" required placeholder="Enter Category" name="category">
+        <input type="text" class="form-control" required placeholder="Enter Category" name="category" list="category list">
+        <datalist id="category list">
+          <option value="Top Destination"></option>
+          <option value="Popular Events"></option>
+          <option value="Ethinic Food"></option>
+          <option value="Adventure Activities"></option>
+        </datalist>
         <div class="valid-feedback">Valid.</div>
           <div class="invalid-feedback">Please fill out this field.</div>
       </div>
@@ -58,9 +76,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text">Username</span>
         </div>
-        <input type="text" class="form-control" required placeholder="Enter Username" name="username">
-        <div class="valid-feedback">Valid.</div>
-          <div class="invalid-feedback">Please fill out this field.</div>
+        <input type="text" class="form-control" value="<%= usrname %>" name="username">
       </div>
   <div class="input-group mb-3 input-group-lg">
     <div class="input-group-prepend">
@@ -73,11 +89,11 @@
    
   <div class="form-group">
     <label for="description">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required name="description"></textarea>
+    <textarea class="form-control" rows="3" required name="description"></textarea>
   </div>
 
   <div class="custom-file mb-3">
-    <input type="file" class="custom-file-input" id="customFile" name="uploaded_image">
+    <input type="file" class="custom-file-input" id="customFile" name="uploaded_image" multiple = "multiple">
     <label class="custom-file-label" for="uploaded_image">Choose file</label>
     
   </div>
@@ -85,9 +101,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-lg">Date</span>
   </div>
-  <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="myDate" value="dd-mm-yyyy" required>
-  <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
+  <input type="text" class="form-control" value="<%= today %>">
 </div>
 
 
@@ -102,12 +116,6 @@
 
     
 <script>
-function myFunction() {
-  var x = document.getElementById("myDate").value;
-  
-}
-
-
 // Add the following code if you want the name of the file appear on select
 $(".custom-file-input").on("change", function() {
   var fileName = $(this).val().split("\\").pop();
@@ -115,8 +123,13 @@ $(".custom-file-input").on("change", function() {
 });
 
 
+
+
 </script>
 
     <script src="js/new.js"></script>
   </body>
+  <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>
+   <!-- Script element sourcing the TinyMCE configuration -->
+   <script type="application/javascript" src= "/javascripts/my-tinymce-config.js"></script>
 </html>

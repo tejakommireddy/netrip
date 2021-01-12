@@ -25,7 +25,7 @@ router.post('/login', (req, res) => {
                 req.session.email = result[0].email;
                 req.session.username = result[0].username;
                 req.session.clientId = result[0].id;
-                res.redirect('/new');
+                res.redirect('/new/'+ usernameOrEmail);
             } else {
                 req.flash('error', 'Wrong password!');
                 res.redirect('/auth/login');
