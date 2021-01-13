@@ -68,6 +68,10 @@ app.get('/login', (req, res) => {
 
    let s;
 
+app.get('/MoreInfo',(req,res) => {
+  res.render('MoreInfo');
+});
+
 const loginRequired = (req, res, next) => {
     if (req.session.username) {
     s = req.session;
