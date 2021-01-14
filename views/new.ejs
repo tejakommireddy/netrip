@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
+
 <head>
   <title>New Post</title>
   <meta charset="utf-8">
@@ -9,127 +10,131 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <header>
-      <title>New Post</title>
-    </header>
-    <style type="text/css">
-      h1 {
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-}
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>tinymce.init({ selector: 'textarea' });</script>
+
+  <header>
+    <title>New Post</title>
+  </header>
+  <style type="text/css">
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+    }
+  </style>
 
 
-    </style>
+</head>
 
-    
-  </head>
-  <body>
-      <h1 class="mt-5" id="h1">New Post</h1>
-      <hr class="w-50">
-    
-      <div class="container mt-3">
+<body>
+  <h1 class="mt-5" id="h1">New Post</h1>
+  <hr class="w-50">
 
-      <form action="/" method="POST" role="form"  enctype="multipart/form-data" class="was-validated">
-        <% if (message.length > 0) { %>
-          <div class="alert alert-success col-sm-12"><%= message %></div>
-      <% } %>
-      <div class="row">
-      <div class="col-6">
-      <div class="input-group mb-3 input-group-lg">
-        <div class="input-group-prepend">
-          <span class="input-group-text">State</span>
+  <div class="container mt-3">
+
+    <form action="/" method="POST" role="form" enctype="multipart/form-data" class="was-validated">
+      <% if (message.length> 0) { %>
+        <div class="alert alert-success col-sm-12">
+          <%= message %>
         </div>
-        <input type="text" class="form-control" required placeholder="Enter State" name="state" list="state list">
-        <datalist id="state list">
-          <option value="Sikkim"></option>
-          <option value="Meghalaya"></option>
-          <option value="Nagaland"></option>
-          <option value="Assam"></option>
-          <option value="Mizoram"></option>
-          <option value="Manipur"></option>
-          <option value="Arunachal"></option>
-          <option value="Tripura"></option>
-        </datalist>
-        <div class="valid-feedback">Valid.</div>
-          <div class="invalid-feedback">Please fill out this field.</div>
-      </div>
-      </div>
-      <div class="col-6">
-      <div class="input-group mb-3 input-group-lg">
-        <div class="input-group-prepend">
-          <span class="input-group-text">Category</span>
-        </div>
-        
-        <input type="text" class="form-control" required placeholder="Enter Category" name="category" list="category list">
-        <datalist id="category list">
-          <option value="Top Destination"></option>
-          <option value="Popular Events"></option>
-          <option value="Ethinic Food"></option>
-          <option value="Adventure Activities"></option>
-        </datalist>
-        <div class="valid-feedback">Valid.</div>
-          <div class="invalid-feedback">Please fill out this field.</div>
-      </div>
-      </div>
-      </div>
-      <div class="input-group mb-3 input-group-lg">
-        <div class="input-group-prepend">
-          <span class="input-group-text">Username</span>
-        </div>
-        <input type="text" class="form-control" value="<%= usrname %>" name="username">
-      </div>
-  <div class="input-group mb-3 input-group-lg">
-    <div class="input-group-prepend">
-      <span class="input-group-text">Title</span>
-    </div>
-    <input type="text" class="form-control" required placeholder="Enter Title" name="title">
-    <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
+        <% } %>
+          <div class="row">
+            <div class="col-6">
+              <div class="input-group mb-3 input-group-lg">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">State</span>
+                </div>
+                <input type="text" class="form-control" required placeholder="Enter State" name="state"
+                  list="state list">
+                <datalist id="state list">
+                  <option value="Sikkim"></option>
+                  <option value="Meghalaya"></option>
+                  <option value="Nagaland"></option>
+                  <option value="Assam"></option>
+                  <option value="Mizoram"></option>
+                  <option value="Manipur"></option>
+                  <option value="Arunachal"></option>
+                  <option value="Tripura"></option>
+                </datalist>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="input-group mb-3 input-group-lg">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Category</span>
+                </div>
+
+                <input type="text" class="form-control" required placeholder="Enter Category" name="category"
+                  list="category list">
+                <datalist id="category list">
+                  <option value="Top Destination"></option>
+                  <option value="Popular Events"></option>
+                  <option value="Ethinic Food"></option>
+                  <option value="Adventure Activities"></option>
+                </datalist>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-3 input-group-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Username</span>
+            </div>
+            <input type="text" class="form-control" value="<%= usrname %>" name="username">
+          </div>
+          <div class="input-group mb-3 input-group-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Title</span>
+            </div>
+            <input type="text" class="form-control" required placeholder="Enter Title" name="title">
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Example textarea</label>
+            <textarea class="form-control" rows="3" name="description"></textarea>
+          </div>
+
+          <div class="custom-file mb-3">
+            <input type="file" class="custom-file-input" id="customFile" name="uploaded_image">
+            <label class="custom-file-label" for="uploaded_image">Choose file</label>
+
+          </div>
+          <div class="input-group input-group-lg mt-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-lg">Date</span>
+            </div>
+            <input type="text" class="form-control" value="<%= today %>">
+          </div>
+
+
+          <div class="text-center">
+
+            <button type="submit" class="btn btn-success btn-lg mt-5" id="Submit">Submit</button>
+
+          </div>
+    </form>
+
   </div>
-   
-  <div class="form-group">
-    <label for="description">Example textarea</label>
-    <textarea class="form-control" rows="3" required name="description"></textarea>
-  </div>
-
-  <div class="custom-file mb-3">
-    <input type="file" class="custom-file-input" id="customFile" name="uploaded_image" multiple = "multiple">
-    <label class="custom-file-label" for="uploaded_image">Choose file</label>
-    
-  </div>
-  <div class="input-group input-group-lg mt-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-lg">Date</span>
-  </div>
-  <input type="text" class="form-control" value="<%= today %>">
-</div>
 
 
-<div class="text-center">
-
-<button type="submit" class="btn btn-success btn-lg mt-5" id="Submit">Submit</button>
-
-</div>
-</form>
-
-    </div>
-
-    
-<script>
-// Add the following code if you want the name of the file appear on select
-$(".custom-file-input").on("change", function() {
-  var fileName = $(this).val().split("\\").pop();
-  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-});
+  <script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function () {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
 
 
 
 
-</script>
+  </script>
 
-    <script src="js/new.js"></script>
-  </body>
-  <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>
-   <!-- Script element sourcing the TinyMCE configuration -->
-   <script type="application/javascript" src= "/javascripts/my-tinymce-config.js"></script>
+  <script src="js/new.js"></script>
+</body>
+
 </html>

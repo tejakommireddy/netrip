@@ -38,7 +38,7 @@
   <hr class="w-50">
 
     <div class="box" style="width: 18rem;display: flex;">
-      <div class="sub-box" style="border: black;">
+      <div class="sub-box" style="border: black;padding-left: 350px;">  
       <img src="http://localhost:3000/imgs/uploads/<%=data[0].images%>" class="card-img-top responsive" alt="...">
         <div class="sub-sub-box" style="display: flex;">
           <a href="/new" class="btn btn-info">Edit</a>
@@ -46,21 +46,20 @@
         </div>
       </div>
 
-      <div class="sub-box" style="border: black;">
+      <div class="sub-box" style="border: black;padding-left: 200px;">
         <img src="http://localhost:3000/imgs/uploads/<%=data[0].images%>" class="card-img-top responsive" alt="...">
           <div class="sub-sub-box" style="display: flex;">
-            <a href="#" class="btn btn-danger">Request Modify</a>
+            <a href="#" class="btn btn-danger" style="white-space: nowrap;text-align: center;">Request Modify</a>
           </div>
         </div>
 
-        <div class="sub-box" style="border: black;">
+        <div class="sub-box" style="border: black;padding-left: 200px;">
           <img src="http://localhost:3000/imgs/uploads/<%=data[0].images%>" class="card-img-top responsive" alt="...">
             <div class="sub-sub-box" style="display: flex;">
               <a href="/new" class="btn btn-info">Edit</a>
               <a href="#" class="btn btn-danger">Delete</a>
             </div>
           </div>  
-        <button type="submit" class="btn btn-success mt-2" style="margin-right: 70px;">Submit</button>
   
     </div>
   <% } %>
